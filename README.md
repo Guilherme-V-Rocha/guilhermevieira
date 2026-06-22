@@ -13,11 +13,11 @@ Portfólio pessoal de **Guilhermer V.**, Frontend Engineer.
 ## 📸 Preview
 
 <div align="center">
-  <img src="./screenshots/hero.png" alt="Hero Section" width="100%" />
+  <img src="public/screenshots/hero.png" alt="Hero Section" width="100%" />
 </div>
 
 <div align="center" style="margin-top: 16px;">
-  <img src="./screenshots/projects.png" alt="Projects Section" width="100%" />
+  <img src="public/screenshots/projects.png" alt="Projects Section" width="100%" />
 </div>
 
 ---
