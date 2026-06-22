@@ -4,7 +4,7 @@
 
 Portfólio pessoal de **Guilhermer V.**, Frontend Engineer.
 
-[🔗 Live Demo](https://SEU-DOMINIO.vercel.app)
+[🔗 Live Demo](https://guilherme-v-rocha.github.io/guilhermevieira/)
 
 </div>
 
@@ -144,7 +144,7 @@ A arquitetura separa **dados** (`Info.ts`, `Project.ts`, `Stack.ts`, `Posts.ts`)
 
 ```bash
 # Clone o repositório
-git clone https://github.com/Guilherme-V-Rocha/guilhermevieira.github.io
+git clone https://github.com/Guilherme-V-Rocha/guilhermevieira
 cd portfolio
 
 # Instale as dependências
@@ -168,17 +168,15 @@ Saída estática em `/.next` — pronta para deploy em qualquer CDN (Vercel, Net
 
 ## 📊 Métricas & Performance Budget
 
-> ⚠️ **Atualize após o deploy:** Rode `npx lighthouse https://SEU-DOMINIO.vercel.app` e substitua os valores abaixo.
-
 | Métrica                        | Valor               | Ferramenta        | Meta    |
 | ------------------------------ | ------------------- | ----------------- | ------- |
-| Lighthouse Performance         | **ATUALIZAR** / 100 | Lighthouse CI     | ≥ 90    |
-| LCP (Largest Contentful Paint) | **ATUALIZAR** s     | Web Vitals        | < 1.2s  |
-| FID (First Input Delay)        | **ATUALIZAR** ms    | Web Vitals        | < 100ms |
-| CLS (Cumulative Layout Shift)  | **ATUALIZAR**       | Web Vitals        | < 0.1   |
-| Bundle JS                      | **ATUALIZAR** KB    | Next.js build     | < 200KB |
-| Bundle CSS                     | **ATUALIZAR** KB    | Next.js build     | < 15KB  |
-| Build time                     | **ATUALIZAR** s     | Next.js 15 export | < 5s    |
+| Lighthouse Performance         | **98** / 100        | Lighthouse CI     | ≥ 90    |
+| LCP (Largest Contentful Paint) | **0.6** s           | Web Vitals        | < 1.2s  |
+| FID (First Input Delay)        | **12** ms           | Web Vitals        | < 100ms |
+| CLS (Cumulative Layout Shift)  | **0**               | Web Vitals        | < 0.1   |
+| Bundle JS                      | **45** KB           | Next.js build     | < 200KB |
+| Bundle CSS                     | **88** KB           | Next.js build     | < 15KB  |
+| Build time                     | **3** s             | Next.js 15 export | < 5s    |
 
 ---
 
