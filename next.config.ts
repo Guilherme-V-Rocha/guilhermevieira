@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: 'export',
   distDir: 'dist',
-  basePath: '/guilhermevieira', // ← NOME DO SEU REPOSITÓRIO
+  basePath: '/guilhermevieira',
   images: {
     unoptimized: true,
   },
