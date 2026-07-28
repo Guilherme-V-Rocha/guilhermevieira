@@ -25,9 +25,7 @@ export function About() {
               <p>
                 Em 2023, atuei como Frontend Developer na{' '}
                 <span className="text-foreground">Viptech</span>, onde
-                arquitetei aplicações React, desenhei interfaces e otimizei
-                builds — migrando de Webpack para Vite e reduzindo tempo de
-                build em ~90%.
+                arquitetei aplicações React, prototipei interfaces, manutenção de uma plataforma para parceiros e desenvolvi interfaces responsivas.
               </p>
               <p>
                 Após um período de pausa e recalibragem profissional, retornei
