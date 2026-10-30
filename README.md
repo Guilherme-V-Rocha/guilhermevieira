@@ -1,12 +1,13 @@
 <div align="center">
 
-# Portfolio — Precision Brutalism
+# Portfólio — Precision Brutalism
 
-Portfólio pessoal de **Guilhermer V.**, Frontend Engineer.
+Portfólio pessoal de **Guilherme V.**, Full Stack Developer.
 
-[🔗 Live Demo](https://guilherme-v-rocha.github.io/guilhermevieira/)
+[🔗 Demo ao vivo](https://guilherme-v-rocha.github.io/guilhermevieira/) · [📥 Currículo (PDF)](./public/cv-guilherme-v.pdf)
 
 </div>
+
 
 ---
 
@@ -24,13 +25,15 @@ Portfólio pessoal de **Guilhermer V.**, Frontend Engineer.
 
 ## 🎯 Sobre
 
-Este portfólio documenta minha trajetória como **Frontend Engineer**.
+Este portfólio documenta minha trajetória como **Full Stack Developer** — frontend first, com expansão recente para Node e arquitetura fullstack.
 
-Em **2023**, atuei na **Viptech** como Frontend Developer, onde arquitetei aplicações React, desenhei interfaces e otimizei builds — migrando de Webpack para Vite e reduzindo tempo de build em ~90%.
+Entre **2021 e 2023**, atuei como Frontend Developer na **Viptech** (2 anos e 3 meses), onde arquitetei aplicações React, prototipei interfaces, mantive uma plataforma para parceiros e desenvolvi interfaces responsivas — destaque para a migração Webpack → Vite, que reduziu o tempo de build em ~90%.
 
-Após um período de pausa e recalibragem profissional, retornei em **setembro de 2025** com estudo focado. Desde então, publiquei **9 projetos no GitHub**, aprofundando Next.js 15/16 com RSC e PPR, TDD, TypeScript e Go para backend.
+Entre 2024 e meados de 2025, fiz uma pausa intencional para reciclagem técnica: revisitei fundamentos, atualizei stack e reenquadrei a direção profissional. Voltei em setembro de 2025 com estudo focado em **Next.js 16 com RSC e PPR, TDD, TypeScript strict, Zustand, TanStack Query e Node**. Desde então, publiquei **8 projetos públicos no GitHub** com commits ativos.
 
-O design segue o conceito **Precision Brutalism** — Tactile Brutalism + Technical Mono + refinamento design-aware. Criado para provar autoria humana contra a homogeneização de templates gerados por IA.
+Busco oportunidades para aplicar essa stack moderna em projetos reais — preferencialmente com arquitetura limpa, design system e foco em performance.
+
+O design segue o conceito **Precision Brutalism** — Tactile Brutalism + Technical Mono + refinamento design-aware. Concebido para provar autoria humana contra a homogeneização de templates gerados por IA.
 
 ### Acessibilidade
 
@@ -97,22 +100,24 @@ NEW-PORTFOLIO/
 │   └── cv-guilherme-v.pdf  # Currículo para download
 ├── src/
 │   ├── app/
-│   │   ├── components/
-│   │   │   └── Header.tsx          # Sticky header com links sociais
-│   │   ├── sections/
-│   │   │   ├── Hero.tsx            # Nome, métricas, CTAs
-│   │   │   ├── Projects.tsx        # 3 projetos com narrativa e métricas
-│   │   │   ├── About.tsx           # História + stack honesta
-│   │   │   └── Contact.tsx         # Contato + em estudo + footer
-│   │   ├── data/
-│   │   │   ├── Info.ts             # Informações pessoais e narrativa
-│   │   │   ├── Posts.ts            # Posts do estudos
-│   │   │   ├── Project.ts          # Dados dos 3 projetos
-│   │   │   └── Stack.ts            # Stack técnica com níveis
-│   │   ├── globals.css             # Tokens de design e noise texture
-│   │   ├── layout.tsx              # Root layout, metadata SEO, fontes
-│   │   ├── page.tsx                # Landing page (monta as 4 seções)
+│   │   ├── globals.css          # Tokens de design e noise texture
+│   │   ├── layout.tsx           # Root layout, metadata SEO, fontes
+│   │   ├── page.tsx             # Landing page (monta as 4 seções)
 │   │   └── favicon.ico
+│   ├── components/              # Componentes reutilizáveis
+│   │   └── MatrixRain.tsx       # Efeito Matrix Rain (canvas)
+│   └── data/                    # Dados separados da apresentação
+│       ├── Info.ts              # Informações pessoais e narrativa (hero, about, contact)
+│       ├── Project.ts           # Dados dos 3 projetos
+│       ├── Stack.ts             # Stack técnica com níveis (React, TS, Next, etc.)
+│       ├── Posts.ts             # Posts externos em dev.to (links + datas)
+│       └── Studying.ts          # Itens da seção "Em estudo" (MFE, Node)
+│   ├── sections/                # Seções da landing page
+│   │   ├── Header.tsx           # Sticky header com links sociais
+│   │   ├── Hero.tsx             # Nome, métricas, CTAs
+│   │   ├── Projects.tsx         # 3 projetos com narrativa e métricas
+│   │   ├── About.tsx            # História + stack honesta
+│   │   └── Contact.tsx          # Contato + em estudo + footer  
 │   ├── .gitignore
 │   ├── next-env.d.ts
 │   ├── next.config.ts              # Configuração de export estático
@@ -123,14 +128,15 @@ NEW-PORTFOLIO/
 │   └── tsconfig.json
 ```
 
-### Por que separar os dados em `src/app/data/`?
+### Por que separar os dados em `src/data/`?
 
-A arquitetura separa **dados** (`Info.ts`, `Project.ts`, `Stack.ts`, `Posts.ts`) de **apresentação** (`sections/`). Isso permite:
+A arquitetura separa **dados** (`Info.ts`, `Project.ts`, `Stack.ts`, `Posts.ts`, `Studying.ts`) de **apresentação** (`sections/` e `components/`). Isso permite:
 
 - **Manutenção:** Atualizar projetos, stack ou contato sem tocar em componentes
 - **Reutilização:** Mesmos dados podem alimentar diferentes views no futuro
 - **Type safety:** Interfaces TypeScript garantem consistência entre dados e UI
 - **Escalabilidade:** Adicionar novos projetos é apenas editar um arquivo de data
+- **Separação de conceitos:** `Posts.ts` (links externos de blog) e `Studying.ts` (itens em estudo agora) são fontes distintas, não uma só
 
 ---
 
@@ -184,10 +190,10 @@ Saída estática em `/.next` — pronta para deploy em qualquer CDN (Vercel, Net
 
 Para adaptar este portfólio para você:
 
-1. **Conteúdo:** Edite os arquivos em `src/app/data/` (`Info.ts`, `Project.ts`, `Stack.ts`, `Posts.ts`)
-2. **Cores:** Modifique os tokens em `src/app/globals.css` e `tailwind.config.ts`
-3. **Projetos:** Atualize `src/app/data/Project.ts` com seus repositórios reais
-4. **Links:** Substitua URLs de GitHub, LinkedIn e email em `src/app/data/Info.ts`
+1. **Conteúdo:** Edite os arquivos em `src/data/` (`Info.ts`, `Project.ts`, `Stack.ts`, `Posts.ts`, `Studying.ts`)
+2. **Cores:** Modifique os tokens em `src/app/globals.css` (Tailwind 4 usa `@theme` no próprio CSS — **não há `tailwind.config.ts`**)
+3. **Projetos:** Atualize `src/data/Project.ts` com seus repositórios reais
+4. **Links:** Substitua URLs de GitHub, LinkedIn e email em `src/data/Info.ts`
 5. **Currículo:** Coloque seu PDF em `public/cv-guilherme-v.pdf`
 6. **Screenshots:** Adicione imagens em `public/screenshots/` e atualize este README
 
